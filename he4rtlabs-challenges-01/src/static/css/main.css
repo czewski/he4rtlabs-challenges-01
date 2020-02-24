@@ -1,54 +1,77 @@
 body {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	min-height: 100vh;
-	height: 100%;
+  line-height: 20px;
+  margin: 0;    
 }
    
-.footer.footer {
+html {
+  overflow-y: scroll;
+}
+
+#content{
+  overflow: hidden;
+  height: 100%;
+}
+
+ footer {
   position: absolute;
   left: 0;
   bottom: 0;
+  margin-bottom: 0;
   width: 100%;
+  height: 35px;
   text-align: center;
+  background-color: #64009e;
+  color: #ffffff ;  
 }
 
   h1,
   h2,
   h3,
-  h5,
-  h6 {
+  h5 {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	font-weight: 750;
   }
   h4 {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 600;
 	text-align: center;
   }
+  h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  }
   
   header.masthead {
 	position: relative;
-	background-color:  #9164cd ;
-	background-size: cover;
+	background-color:  #64009e;
+	padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+
+  .features-icons {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-  }
-  
-  .features-icons {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
   }
   .features-icons .features-icons-item .features-icons-icon {
     height: 7rem;
   }
 
+  .testhead {
+    max-width: 100%;
+    height: auto;
+  }
+
+
   .form{
       padding: 50px;
       width: 50em;
       height: 36em;
-      background-color: #f9f8fc;
+      /* background-color: #f9f8fc; */
       text-align: center;
-  }
+  } 
 
   .form-input{
     margin-top: 20px;
@@ -60,12 +83,11 @@ body {
   }
 
   textarea:focus, input:focus {
-    transition:  0.5s;
+    transition:  0.1s;
     border-bottom: 1.5px solid #490173 !important;
     outline: none;
   }
   
-  /* input tipo text mas como number */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -84,7 +106,6 @@ body {
 	font-weight: 700;
 }
 
-
 .button:hover {
   color: #fff;
   background-color: #490173;
@@ -97,3 +118,4 @@ body {
   background-color: #9124a3;
   border-color: #701c7e;
 }
+

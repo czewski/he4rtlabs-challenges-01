@@ -1,5 +1,5 @@
 {% load static %}
-<form method="post" name="testForm"> {% csrf_token %}
+<form method="post" name="testForm" action="{% url 'result' %}"> {% csrf_token %}
     <div class="container">
       <section class="features-icons  text-center">
           <div class="row">
@@ -9,7 +9,7 @@
                     <img  class="icon-layers m-auto text-primary" src="{% static 'ampulheta.png' %}">
                 </div>
                 <h4>Tempo diário</h4>
-                <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                <p class="lead mb-0">Número de horas trabalhadas que você pretende investir por dia no projeto.</p>
                 <input type="number" name="dailytime" id="dailyTime" class="form-input" placeholder="Tempo em horas..." >
               </div>
             </div>
@@ -20,11 +20,11 @@
                     <img  class="icon-layers m-auto text-primary" src="{% static 'calendario.png' %}">
                 </div>
                 <h4>Dias da semana</h4>			
-                <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                <p class="lead mb-0">Número de dias da semana que você vai conseguir se dedicar ao desenvolvimento.</p>
                 <input type="number" name="weekdays" id="weekDays"  class="form-input" placeholder="Tempo em horas..." >
               </div>
             </div>
-        </div><!--  endrow -->
+        </div>
         <div class="row">
             <div class="col">
               <div class="features-icons-item mx-auto mb-0 mb-lg-3">
@@ -32,7 +32,7 @@
                     <img  class="icon-layers m-auto text-primary" src="{% static 'ferias.png' %}">
                 </div>
                 <h4>Férias planejadas</h4>
-                <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                <p class="lead mb-0">Número de dias que você deseja tirar férias durante o ano.</p>
                 <input type="number" name="vacationdays" id="vacationDays" class="form-input" placeholder="Tempo em horas...">
               </div>
             </div>
@@ -44,17 +44,20 @@
                 <img  class="icon-layers m-auto text-primary" src="{% static 'valor.png' %}">
               </div>
               <h4>Valor total</h4>
-              <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+              <p class="lead mb-0">Valor total a ser recebido pelo desenvolvimento do projeto.</p>
               <input type="number" name="totalprice" id="totalPrice"  class="form-input" placeholder="Tempo em horas...">
             </div>
           </div>
         </div>
-      </section>
-    
+
         <div class="row">
-            <div class="col text-center">
-                <button type="submit" class="button"> Calcular </button>
-            </div>
-        </div>
-    </div>
+          <div class="col text-center">
+              <button type="submit" class="button"> Calcular </button>
+          </div>
+      </div>
+    </section>
+  </div>
+
+    
+  
 </form>

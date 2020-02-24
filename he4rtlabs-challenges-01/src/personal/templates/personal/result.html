@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" >
+    <section class="features-icons text-center">
+        <div class="row" >
+          <div class="col" >
+            <div class="features-icons-item mx-auto">		
+              <div class="features-icons-icon d-flex">
+                  <img  class="icon-layers m-auto text-primary" src="{% static 'dinheiro.png' %}">
+              </div>
+            <p class="lead mb-0">Valor a cobrar por hora:  </p>
+            <h1>R$ {{valor_horas|floatformat:"2"}} </h1>
+        </div>
+    </section>
+    <div class="row text-center">
+        <div class="col">
+        <form action="{% url 'home' %}">
+         <button class="button">Re-calcular</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+    
+
+{% endblock content%}
